@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "description": "High-performance Zig tool to scan code for unfinished vibes (TODOs, secrets, etc)",
+    "homepage": "https://github.com/copyleftdev/vibecheck",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/copyleftdev/vibecheck/releases/download/v1.0.0/vibecheck-x86_64-windows.zip",
+            "hash": "REPLACE_WITH_SHA256"
+        }
+    },
+    "bin": "vibecheck.exe",
+    "checkver": "github"
+}

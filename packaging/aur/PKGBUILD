@@ -1,0 +1,18 @@
+# Maintainer: Copyleft Dev <... at example dot com>
+pkgname=vibecheck-bin
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="High-performance Zig tool to scan code for unfinished vibes"
+arch=('x86_64')
+url="https://github.com/copyleftdev/vibecheck"
+license=('MIT')
+provides=('vibecheck')
+conflicts=('vibecheck')
+source_x86_64=("https://github.com/copyleftdev/vibecheck/releases/download/v${pkgver}/vibecheck-x86_64-linux.tar.gz")
+sha256sums_x86_64=('REPLACE_WITH_SHA256')
+
+package() {
+	cd "$srcdir"
+	install -Dm755 vibecheck "$pkgdir/usr/bin/vibecheck"
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
