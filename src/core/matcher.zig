@@ -72,3 +72,40 @@ pub const Matcher = struct {
         return false;
     }
 };
+
+test "fuzz matcher" {
+    try std.testing.fuzz(std.testing.allocator, fuzzMain, .{});
+}
+
+fn fuzzMain(allocator: std.mem.Allocator, input: []const u8) !void {
+    var m = Matcher.init(allocator);
+    defer m.deinit();
+
+    // Add typical patterns
+    try m.addPattern(.{
+        .id = "todo",
+        .name = "TODO",
+        .severity = .info,
+        .match_type = .keyword,
+        .query = "TODO",
+    });
+    try m.addPattern(.{
+        .id = "secret",
+        .name = "Secret",
+        .severity = .critical,
+        .match_type = .keyword,
+        .query = "password = ",
+    });
+
+    var findings = std.ArrayList(finding.Finding).init(allocator);
+    defer {
+        for (findings.items) |f| {
+            allocator.free(f.location.path);
+            if (f.location.snippet) |s| allocator.free(s);
+        }
+        findings.deinit();
+    }
+
+    // Fuzz the scanFile method
+    try m.scanFile("fuzz_test.zig", input, &findings);
+}

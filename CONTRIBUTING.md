@@ -20,6 +20,14 @@ We love new vibes. If you have an idea for a core pattern or a totally new featu
 4. Run tests (or just verify `zig build run` passes cleanly).
 5. Push and open a PR.
 
+## Fuzzing 🐝
+We use Zig's built-in fuzzer to stress-test the Matcher engine.
+To run the fuzzer:
+```bash
+zig build test --fuzz
+```
+This will run indefinitely, feeding random input to `Matcher.scanFile`.
+
 ## Style Guide
 - **Zig Format**: Run `zig fmt .` before committing.
 - **Errors**: Handle them properly. No `catch unreachable` unless you are absolutely certain.
