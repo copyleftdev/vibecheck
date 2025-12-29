@@ -1,0 +1,23 @@
+# Zig Cache
+zig-cache/
+zig-out/
+.zig-cache
+.zig-out
+
+# Editor Settings
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+
+# VibeCheck Generated
+haystack_test/
+haystack_monorepo/
+
+# Build Artefacts
+test_vibes.txt
+
+# Temp files
+*.tmp
+*.log

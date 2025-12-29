@@ -1,0 +1,7 @@
+[scan]
+max_results = 50
+ignore = ["*.tmp", "secrets.txt", "src/registry/"]
+# packs = ["examples/extra_vibes.json"]
+
+[output]
+fail_on = "warn"

@@ -1,0 +1,69 @@
+{
+  "name": "Crucial Vibes",
+  "version": "1.0.0",
+  "patterns": [
+    {
+      "id": "todo",
+      "name": "TODO Marker",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "TODO"
+    },
+    {
+      "id": "fixme",
+      "name": "FIXME Marker",
+      "severity": "error",
+      "match_type": "keyword",
+      "query": "FIXME"
+    },
+    {
+      "id": "mock-data",
+      "name": "Mock Data Leftover",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "lorem ipsum"
+    },
+    {
+      "id": "placeholder-user",
+      "name": "Placeholder User",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "John Doe"
+    },
+    {
+      "id": "fragile-local-url",
+      "name": "Localhost Hardcoded",
+      "severity": "error",
+      "match_type": "keyword",
+      "query": "localhost:3000"
+    },
+    {
+      "id": "fragile-ip",
+      "name": "Hardcoded Loopback IP",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "127.0.0.1"
+    },
+    {
+      "id": "insecure-bypass",
+      "name": "TLS/Auth Bypass",
+      "severity": "error",
+      "match_type": "keyword",
+      "query": "verify=False"
+    },
+    {
+      "id": "desperation-xxx",
+      "name": "Desperation Marker (XXX)",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "XXX"
+    },
+    {
+      "id": "debug-print",
+      "name": "Debug Print",
+      "severity": "info",
+      "match_type": "keyword",
+      "query": "console.log"
+    }
+  ]
+}

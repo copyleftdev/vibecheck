@@ -1,0 +1,20 @@
+{
+    "name": "Extra Vibes",
+    "version": "0.1.0",
+    "patterns": [
+        {
+            "id": "extra-legacy",
+            "name": "Legacy Code Marker",
+            "severity": "info",
+            "match_type": "keyword",
+            "query": "legacy"
+        },
+        {
+            "id": "hardcoded-password",
+            "name": "Hardcoded Password",
+            "severity": "critical",
+            "match_type": "keyword",
+            "query": "password ="
+        }
+    ]
+}
