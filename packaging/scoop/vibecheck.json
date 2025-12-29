@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/copyleftdev/vibecheck/releases/download/v1.0.0/vibecheck-x86_64-windows.zip",
-            "hash": "REPLACE_WITH_SHA256"
+            "hash": "04e5390080ce680581850ba62fae84218cfc5cb163c24882cdc1804699895163"
         }
     },
     "bin": "vibecheck.exe",

@@ -9,7 +9,7 @@ license=('MIT')
 provides=('vibecheck')
 conflicts=('vibecheck')
 source_x86_64=("https://github.com/copyleftdev/vibecheck/releases/download/v${pkgver}/vibecheck-x86_64-linux.tar.gz")
-sha256sums_x86_64=('REPLACE_WITH_SHA256')
+sha256sums_x86_64=('3055578fd0c90abfa1c2586c01b17c11a682c19078612cc8b3f26421c1564af3')
 
 package() {
 	cd "$srcdir"
